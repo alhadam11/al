@@ -1,0 +1,13 @@
+/* TEAM */
+	Owner: وكالة الحيدم للسفريات والسياحة
+	Contact: alimoqbel21@gmail.com
+	Twitter: @AlhydamAgency
+	Facebook: https://www.facebook.com/AlhydamAgency
+	From: صنعاء، اليمن
+
+/* SITE */
+	Last update: 2023
+	Language: Arabic
+	Doctype: HTML5
+	IDE: Visual Studio Code, GitHub
+	Technology: HTML5, CSS3, JavaScript, Bootstrap 5

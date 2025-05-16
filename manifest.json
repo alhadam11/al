@@ -1,0 +1,21 @@
+{
+  "name": "وكالة الحيدم للسفريات والسياحة",
+  "short_name": "الحيدم للسفريات",
+  "description": "وكالة الحيدم للسفريات والسياحة - خدمات سياحية متكاملة تشمل تأشيرات العمل للسعودية، الحج والعمرة، حجز تذاكر طيران، شحن بحري وجوي",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ce1126",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

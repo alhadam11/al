@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - وكالة الحيدم للسفريات والسياحة</title>
+    <meta name="description" content="معرض صور وكالة الحيدم للسفريات والسياحة - شاهد صور من مكتبنا، رحلاتنا، وخدماتنا المتنوعة التي تشمل تأشيرات العمل، الحج والعمرة، حجز تذاكر الطيران والشحن البحري والجوي">
+    <meta name="keywords" content="وكالة الحيدم للسفريات والسياحة, الحيدم للسفريات, الحيدم للسياحة, وكالة الحيدم, معرض صور الحيدم, صور وكالة الحيدم, Alhydam Travel Agency, معرض صور وكالة سفر, صور خدمات السفر, صور مكتب الحيدم, صور تأشيرات العمل, صور رحلات الحج والعمرة, صور الشحن البحري والجوي, وكالة سفر في صنعاء, وكالة سفر في اليمن, سفريات صنعاء, سياحة اليمن, شارع الستين صنعاء, أفضل وكالة سفر في اليمن">
+    <meta name="author" content="وكالة الحيدم للسفريات والسياحة">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="معرض الصور - وكالة الحيدم للسفريات والسياحة">
+    <meta property="og:description" content="معرض صور وكالة الحيدم للسفريات والسياحة - شاهد صور من مكتبنا، رحلاتنا، وخدماتنا المتنوعة التي تشمل تأشيرات العمل، الحج والعمرة، حجز تذاكر الطيران والشحن البحري والجوي">
+    <meta property="og:image" content="img/gallery-1.jpg">
+    <meta property="og:url" content="https://alhadam1.github.io/alhadam100-/gallery.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://alhadam1.github.io/alhadam100-/gallery.html">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/new-style.css">
+    <style>
+        .gallery-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* Glassmorphism Card Style */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.5s;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+            border-radius: 12px;
+            padding: 5px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: linear-gradient(135deg, rgba(206, 17, 38, 0.7) 0%, rgba(0, 122, 61, 0.7) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s;
+            border-radius: 12px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transform: translateY(30px) scale(0.5);
+            transition: all 0.5s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item:hover .gallery-icon {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Filter Buttons */
+        .gallery-filter {
+            margin-bottom: 40px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .gallery-filter .btn {
+            margin: 0 5px 10px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-filter .btn:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .gallery-filter .btn.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .gallery-item-container:nth-child(odd) .gallery-item {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .gallery-item-container:nth-child(even) .gallery-item {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        /* Section Title with Glassmorphism */
+        .section-title {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <div class="contact-info-item">
+                            <div class="contact-icon" onclick="window.location.href='mailto:alimoqbel21@gmail.com';" style="cursor: pointer;">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="d-block contact-label">البريد الإلكتروني</span>
+                                <a href="mailto:alimoqbel21@gmail.com" class="contact-value-link">alimoqbel21@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item ms-4">
+                            <div class="contact-icon" onclick="window.location.href='tel:774277418';" style="cursor: pointer;">
+                                <i class="fa fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="d-block contact-label">اتصل بنا</span>
+                                <a href="tel:774277418" class="contact-value-link">774277418</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="social-icon" href="https://www.facebook.com/AlhydamAgency" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon" href="https://wa.me/967774277418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-sm btn-primary rounded-pill px-4 ms-3" href="index.html#contact">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="شعار وكالة الحيدم للسفريات والسياحة" class="floating-header-logo" style="height: 70px; margin-left: 10px;">
+                <div class="d-inline-block">
+                    <h1 class="m-0">وكالة الحيدم</h1>
+                    <span class="fs-5">للسفريات والسياحة</span>
+                </div>
+            </a>
+
+            <style>
+                .floating-header-logo {
+                    animation: floatHeaderLogo 4s ease-in-out infinite;
+                }
+
+                @keyframes floatHeaderLogo {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-5px); }
+                }
+            </style>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">الرئيسية</a>
+                    <a href="index.html#about" class="nav-item nav-link">نبذة عنا</a>
+                    <a href="index.html#about-us" class="nav-item nav-link">من نحن</a>
+                    <a href="index.html#services" class="nav-item nav-link">خدماتنا</a>
+                    <a href="gallery.html" class="nav-item nav-link active">معرض الصور</a>
+                    <a href="faq.html" class="nav-item nav-link">الأسئلة الشائعة</a>
+                    <a href="index.html#contact" class="nav-item nav-link">تواصل بنا</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Header with Transparent Title -->
+    <div class="container-fluid py-5 position-relative" style="background: url('img/gallery-1.jpg') center center no-repeat; background-size: cover; background-attachment: fixed; overflow: hidden;">
+        <!-- Animated Background Elements -->
+        <div class="position-absolute" style="top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(206, 17, 38, 0.2); border-radius: 50%; filter: blur(80px); animation: float-slow 8s infinite alternate;"></div>
+        <div class="position-absolute" style="bottom: -50px; right: -50px; width: 250px; height: 250px; background: rgba(0, 122, 61, 0.2); border-radius: 50%; filter: blur(80px); animation: float-slow 10s infinite alternate-reverse;"></div>
+        <div class="position-absolute" style="top: 50%; left: 30%; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; filter: blur(60px); animation: float-slow 7s infinite alternate;"></div>
+
+        <div class="container py-5 position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <!-- Transparent Title Box -->
+                    <div style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); border: 1px solid rgba(255, 255, 255, 0.18);">
+                        <h1 class="display-3 mb-3 animate__animated animate__fadeInUp" style="color: var(--primary); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">معرض الصور</h1>
+                        <p class="fs-5 mb-0 animate__animated animate__fadeInUp animate__delay-1s" style="color: var(--primary); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">صور من مكتبنا وخدماتنا المتنوعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes float-slow {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(30px) translateX(20px);
+            }
+            100% {
+                transform: translateY(-20px) translateX(-10px);
+            }
+        }
+    </style>
+
+    <!-- Gallery Section -->
+    <div class="container-fluid gallery-section" style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('img/pattern.png') center center repeat; background-attachment: fixed;">
+        <div class="container">
+            <div class="section-title text-center position-relative mb-5">
+                <h6 class="fw-bold text-primary text-uppercase animate__animated animate__fadeInUp">معرض الصور</h6>
+                <h1 class="mb-0 animate__animated animate__fadeInUp animate__delay-1s">استعرض أعمالنا</h1>
+            </div>
+
+            <div class="text-center gallery-filter mb-5 animate__animated animate__fadeInUp animate__delay-2s">
+                <button class="btn btn-outline-primary active filter-btn" data-filter="all">الكل</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="office">المكتب</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="services">الخدمات</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="trips">الرحلات</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 gallery-item-container office animate__animated animate__fadeInUp">
+                    <div class="gallery-item">
+                        <img src="img/office.jpg" alt="صورة مكتب وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/office.jpg" data-lightbox="gallery" data-title="مكتب وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container services animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="gallery-item">
+                        <img src="img/gallery-2.jpg" alt="خدمات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-2.jpg" data-lightbox="gallery" data-title="خدمات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container trips animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="gallery-item">
+                        <img src="img/gallery-3.jpg" alt="رحلات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-3.jpg" data-lightbox="gallery" data-title="رحلات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container services animate__animated animate__fadeInUp">
+                    <div class="gallery-item">
+                        <img src="img/gallery-4.jpg" alt="خدمات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-4.jpg" data-lightbox="gallery" data-title="خدمات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container services animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="gallery-item">
+                        <img src="img/gallery-5.jpg" alt="خدمات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-5.jpg" data-lightbox="gallery" data-title="خدمات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container trips animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="gallery-item">
+                        <img src="img/gallery-6.jpg" alt="رحلات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-6.jpg" data-lightbox="gallery" data-title="رحلات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item-container trips animate__animated animate__fadeInUp">
+                    <div class="gallery-item">
+                        <img src="img/gallery-7.jpg" alt="رحلات وكالة الحيدم للسفريات والسياحة">
+                        <div class="gallery-overlay">
+                            <a href="img/gallery-7.jpg" data-lightbox="gallery" data-title="رحلات وكالة الحيدم للسفريات والسياحة">
+                                <div class="gallery-icon">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">وكالة الحيدم</h4>
+                    <a class="btn btn-link" href="index.html#about">نبذة عنا</a>
+                    <a class="btn btn-link" href="index.html#contact">تواصل معنا</a>
+                    <a class="btn btn-link" href="index.html#services">خدماتنا</a>
+                    <a class="btn btn-link" href="gallery.html">معرض الصور</a>
+                    <a class="btn btn-link" href="faq.html">الأسئلة الشائعة</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">تواصل معنا</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>اليمن - صنعاء - شارع الستين</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>774277418 - 778885630</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>alimoqbel21@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/AlhydamAgency" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/967774277418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="text-white mb-3">خدماتنا</h4>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <a class="btn btn-link" href="index.html#services">تأشيرات العمل</a>
+                            <a class="btn btn-link" href="index.html#services">تأشيرات الزيارة</a>
+                            <a class="btn btn-link" href="index.html#services">الحج والعمرة</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <a class="btn btn-link" href="index.html#services">حجز تذاكر</a>
+                            <a class="btn btn-link" href="index.html#services">الشحن البحري والجوي</a>
+                            <a class="btn btn-link" href="index.html#services">خدمات إرسال الرسائل</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">وكالة الحيدم للسفريات والسياحة</a>, جميع الحقوق محفوظة.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/967774277418" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': "صورة %1 من %2"
+            });
+
+            // Simple filtering without Isotope
+            $('.filter-btn').on('click', function() {
+                // Get filter value
+                var filterValue = $(this).data('filter');
+                console.log('Filter clicked:', filterValue);
+
+                // Add active class
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+
+                // Show/hide items based on filter
+                if (filterValue === 'all') {
+                    // Show all items
+                    $('.gallery-item-container').show();
+                } else {
+                    // Hide all items
+                    $('.gallery-item-container').hide();
+                    // Show only items with the selected class
+                    $('.gallery-item-container.' + filterValue).show();
+                }
+            });
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

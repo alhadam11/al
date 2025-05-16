@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وكالة الحيدم للسفريات والسياحة</title>
+    <meta name="description" content="وكالة الحيدم للسفريات والسياحة - خدمات سياحية متكاملة، حجز تذاكر، فنادق، رحلات سياحية وعروض مميزة">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="contact-info">
+                    <span><i class="fas fa-map-marker-alt"></i> صنعاء - اليمن</span>
+                    <span><i class="fab fa-whatsapp"></i> 774277418 - 778885630</span>
+                    <span><i class="fas fa-envelope"></i> info@alhydam-travel.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/AlhydamAgency" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/967774277418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>وكالة الحيدم</h1>
+                        <span>للسفريات والسياحة</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="active"><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">عن الوكالة</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="destinations.html">الوجهات السياحية</a></li>
+                        <li><a href="packages.html">العروض والباقات</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                <div class="booking-btn">
+                    <a href="booking.html" class="btn btn-primary">احجز الآن</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h2>وكالة الحيدم للسفريات والسياحة</h2>
+                    <p>خدمات متكاملة للسفر والسياحة والحج والعمرة وتأشيرات العمل والشحن البحري والجوي</p>
+                    <a href="services.html" class="btn btn-light">تعرف على خدماتنا</a>
+                </div>
+                <div class="overlay"></div>
+                <div class="slide-bg" style="background-color: var(--primary-color);"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>خدمات الحج والعمرة</h2>
+                    <p>باقات متكاملة للحج والعمرة تشمل التأشيرات والإقامة والمواصلات والإرشاد بأفضل الأسعار</p>
+                    <a href="services.html" class="btn btn-light">احجز الآن</a>
+                </div>
+                <div class="overlay"></div>
+                <div class="slide-bg" style="background-color: var(--secondary-color);"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>تأشيرات العمل والسفر</h2>
+                    <p>خدمات استخراج تأشيرات العمل للمملكة العربية السعودية وتأشيرات السفر لجميع دول العالم</p>
+                    <a href="services.html" class="btn btn-light">تواصل معنا</a>
+                </div>
+                <div class="overlay"></div>
+                <div class="slide-bg" style="background-color: var(--accent-color);"></div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="next-slide"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Box Section -->
+    <section class="search-box-section">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="flights">حجز طيران</button>
+                    <button class="tab-btn" data-tab="hotels">حجز فنادق</button>
+                    <button class="tab-btn" data-tab="hajj">الحج والعمرة</button>
+                    <button class="tab-btn" data-tab="visa">التأشيرات</button>
+                    <button class="tab-btn" data-tab="shipping">الشحن البحري</button>
+                    <button class="tab-btn" data-tab="local">رحلات محلية</button>
+                </div>
+                <div class="tab-content active" id="flights">
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label>من</label>
+                            <input type="text" placeholder="مدينة المغادرة">
+                        </div>
+                        <div class="form-group">
+                            <label>إلى</label>
+                            <input type="text" placeholder="مدينة الوصول">
+                        </div>
+                        <div class="form-group">
+                            <label>تاريخ المغادرة</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>تاريخ العودة</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>المسافرين</label>
+                            <select>
+                                <option>1 بالغ</option>
+                                <option>2 بالغ</option>
+                                <option>3 بالغ</option>
+                                <option>4 بالغ</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">بحث</button>
+                    </form>
+                </div>
+                <!-- الأقسام الأخرى ستكون مخفية بالـ CSS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>خدماتنا المتنوعة</h2>
+                <p>نقدم لكم مجموعة شاملة من خدمات السفر والسياحة لتلبية جميع احتياجاتكم</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>حجز تذاكر طيران</h3>
+                    <p>حجز تذاكر طيران لجميع شركات الطيران العالمية بأفضل الأسعار وأسرع وقت</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <h3>خدمات الحج والعمرة</h3>
+                    <p>باقات متكاملة للحج والعمرة تشمل التأشيرات والإقامة والمواصلات والإرشاد</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>تأشيرات العمل</h3>
+                    <p>خدمات استخراج تأشيرات العمل للمملكة العربية السعودية وغيرها من الدول</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>حجز بحري وجوي</h3>
+                    <p>خدمات الحجز البحري والجوي لجميع الوجهات العالمية بأفضل الأسعار</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus-alt"></i>
+                    </div>
+                    <h3>رحلات يومية داخل اليمن</h3>
+                    <p>تنظيم رحلات يومية إلى مختلف المناطق السياحية داخل اليمن بأسعار مناسبة</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>خدمات إرسال الرسائل</h3>
+                    <p>خدمات إرسال واستقبال الرسائل والطرود بسرعة وأمان إلى مختلف دول العالم</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>حجز فنادق</h3>
+                    <p>حجز فنادق في جميع أنحاء العالم بأسعار تنافسية وخيارات متنوعة تناسب الجميع</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>خدمات متنوعة</h3>
+                    <p>خدمات متنوعة أخرى تشمل استخراج جوازات السفر، تجديد الإقامات، والاستشارات</p>
+                    <a href="services.html" class="read-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
