@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alhadam1.github.io/alhadam100-/sitemap.xml
+Sitemap: https://alhadam11.github.io/al/sitemap.xml
